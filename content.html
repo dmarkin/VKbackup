@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css"/>
+</head>
+<body>
+
+<div class="main">
+
+    <div class="row-fluid">
+        <div class="span8 offset2 user-info">
+            <div class="user-h1 offset4">
+                <h1>List of friends:</h1>
+            </div>
+            <div class="user-photo"></div>
+        </div>
+    </div>
+
+    <div class="choice-form row-fluid">
+        <div class="span3 offset2">
+            <form action="" id="choicePerson">
+                <input placeholder="Input user ID" id="user-id" type="text" class="input-sm"/>
+                <button id="friends-info" class="btn btn-info">Get list</button>
+                <button id="friends-clear" class="btn btn-danger">Clear list</button>
+            </form>
+        </div>
+
+        <div class="">
+            <form action="" id="addPerson">
+                <input type="text" placeholder="New person name" id="form-name" class="input-sm">
+                <input type="text" placeholder="New person surname" id="form-surname" class="input-sm">
+                <input type="text" placeholder="Age" id="form-age" class="input-sm">
+                <input type="submit" value="Add person" class="btn btn-success">
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <script type="text/template" id="personTemplate">
+            <div class="person">
+                <div class="id"><strong><%= user_id %></strong></div>
+                <div class="surname"><strong><%= last_name %></strong></div>
+                <div class="name"><strong><%= first_name %></strong></div>
+                <div class="birth"><strong><%= bdate %></strong></div>
+                <div class="city"><strong><%= city %></strong></div>
+                <div class="country"><strong><%= country %></strong></div>
+                <button class="edit btn-sm btn-primary">Edit</button>
+                <button class="delete btn-sm btn-danger">Delete</button>
+            </div>
+        </script>
+    </div>
+
+    <div class="data offset1">
+        <div class="person">
+            <div class="id"><strong>User ID</strong></div>
+            <div class="surname"><strong>Surname</strong></div>
+            <div class="name"><strong>Name</strong></div>
+            <div class="birth"><strong>Date of birth</strong></div>
+            <div class="city"><strong>City</strong></div>
+            <div class="country"><strong>Country</strong></div>
+            <div class="person-title-btns"><strong>Edit...</strong></div>
+            <div class="person-title-btns"><strong>Delete...</strong></div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script src="js/vkrequest.js"></script>
+<script src="js/app.js"></script>
+<!--<script src="js/models/modelsome.js"></script>
+<script src="js/views/viewsome.js"></script>-->
+
+</html>
